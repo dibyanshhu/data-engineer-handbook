@@ -259,3 +259,21 @@ Top must follow newsletters for data engineering:
 - [Exam DP-203: Data Engineering on Microsoft Azure](https://learn.microsoft.com/en-us/credentials/certifications/exams/dp-203/?tab=tab-learning-paths)
 - [Microsoft Fabric Analytics Engineer Associate](https://learn.microsoft.com/credentials/certifications/fabric-analytics-engineer-associate/)
 - [AWS Certified Data Engineer - Associate](https://aws.amazon.com/certification/certified-data-engineer-associate/)
+
+
+
+
+
+
+### DIB setup
+
+## Postgres with repos steps
+
+# 1) Download docker
+# 2) download dbeaver
+# 3) clone repo
+# 4) copy eample.env
+# 5) update the port 
+# 6) run the "docker compose up -d"
+# 7) open the container "docker exec -it <container_id> bash"
+# 8) run the psql comman "pg_restore -v --username $POSTGRES_USER --dbname $POSTGRES_DB /docker-entrypoint-initdb.d/data.dump
