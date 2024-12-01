@@ -4,17 +4,16 @@
 		where current_year = 2021
 		AND end_date = 2021
 	),
-		historical_scd AS (
-			SELECT actor
-				   ,films
-				   ,is_active
-				   ,start_date
-				   ,end_date
-			FROM actors_history_scd 
-			where current_year = 2021
-			AND end_date < 2021
+	historical_scd AS (
+		SELECT actor
+				,films
+				,is_active
+				,start_date
+				,end_date
+		FROM actors_history_scd 
+		where current_year = 2021
+		AND end_date < 2021
 	),
-	
 	this_actor_data AS (
 		SELECT * FROM actors
 		WHERE current_year = 2022
@@ -47,11 +46,11 @@
 					    ,ts.current_year
 					)::scd_type
 					]) AS records
-			from this_actor_data ts
-			join last_actor_scd ls 
-			on ts.actor = ls.actor
-			where (ts.films <> ls.films
-			or ts.is_active <> ls.is_active)
+		from this_actor_data ts
+		join last_actor_scd ls 
+		on ts.actor = ls.actor
+		where (ts.films <> ls.films
+		or ts.is_active <> ls.is_active)
 	),
 	unnested_changes_records AS(
 		select actor
