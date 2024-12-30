@@ -170,3 +170,13 @@ Where:
 - To see logs from the Postgres container, run **`make logs`**.
 - To inspect the Postgres container, run **`make inspect`**.
 - To find the port Postgres is running on, run **`make ip`**.
+
+#### Refrence
+psql -U postgres -d postgres < /docker-entrypoint-initdb.d/data.dump
+psql -U dibya postgres < data.dump
+
+psql -v ON_ERROR_STOP=1 --username $POSTGRES_USER --dbname $POSTGRES_DB < /docker-entrypoint-initdb.d/data.dump>
+
+spark-submit --master local[2] --conf spark.sql.autoBroadcastJoinThreshold=-1 week3_assignment.py
+
+https://www.oreilly.com/software-architecture-video-training-series.html
