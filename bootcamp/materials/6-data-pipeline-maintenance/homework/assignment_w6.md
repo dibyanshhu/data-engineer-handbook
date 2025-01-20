@@ -6,17 +6,17 @@ The five pipelines that need to be managed focus on the following areas:
 
 ### Profit:
 
-     - Unit-level profit needed for experiments.
+    - Unit-level profit needed for experiments.
     - Aggregate profit reported to investors.
 
 ### Growth:
 
-     - Aggregate growth reported to investors.
+    - Aggregate growth reported to investors.
     - Daily growth needed for experiments.
 
 ### Engagement:
 
-     - Aggregate engagement reported to investors.
+    - Aggregate engagement reported to investors.
 
 ## Ownership Structure
 
